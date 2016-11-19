@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   submitQuiz: () => {
-    console.log("hit")
+    console.log(dispatch)
     dispatch(getRandomNumbers(2, ownProps.size))
     console.log("after dispatch")
   }
