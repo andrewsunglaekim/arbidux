@@ -1,4 +1,3 @@
-
 const numbers = (state = [], action) => {
   switch (action.type) {
     case "GET_RANDOM_NUMBERS":

@@ -1,8 +1,7 @@
-// let number = require('./numbers')
-// module.exports = {
-//   number
-// }
 import numbers from './numbers'
+import attemptCounter from './attemptCounter'
+
 export default {
-  numbers
+  numbers,
+  attemptCounter
 }
