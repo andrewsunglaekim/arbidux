@@ -9,12 +9,23 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
+const isCorrect = (nums, answer) => nums.reduce((prev = 0, curr) => prev + curr) === answer
+const submitQuiz = (answer) => {
+  return (dispatch, getState) => {
+    let state = getState();
+    if (isCorrect){
+      // increment correct counter
+    }else {
 
+    }
+    // do anytime quiz submitted
+      // increment attemp counter
+  }
+}
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  submitQuiz: () => {
-    console.log(dispatch)
-    dispatch(getRandomNumbers(2, ownProps.size))
-    console.log("after dispatch")
+  onSubmitQuiz: (answer) => {
+    console.log(answer, "this is submitting quiz")
+    dispatch(submitQuiz(answer))
   }
 })
 
