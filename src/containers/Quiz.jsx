@@ -13,7 +13,7 @@ const isCorrect = (nums, answer) => nums.reduce((prev = 0, curr) => prev + curr)
 const submitQuiz = (answer, ownProps) => {
   return (dispatch, getState) => {
     let state = getState();
-    console.log("this is state: ", state)
+    console.log("this is state:  before dispatches", state)
     if (isCorrect(state.numbers, answer)){
       dispatch(incrementCorrectCounter())
     }else {
