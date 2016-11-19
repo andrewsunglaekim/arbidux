@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import { getRandomNumbers, incrementAttemptCounter } from '../actions'
+import { getRandomNumbers, incrementAttemptCounter, incrementCorrectCounter } from '../actions'
 import Quiz from '../components/Quiz'
 
 const mapStateToProps = (state, ownProps) => {
@@ -15,7 +15,7 @@ const submitQuiz = (answer, ownProps) => {
     let state = getState();
     console.log("this is state: ", state)
     if (isCorrect(state.numbers, answer)){
-      // increment correct counter
+      dispatch(incrementCorrectCounter())
     }else {
 
     }

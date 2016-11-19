@@ -12,3 +12,7 @@ export const submitQuiz = (answer) => ({
 export const incrementAttemptCounter = () => ({
   type: 'INCREMENT_ATTEMPT_COUNTER'
 })
+
+export const incrementCorrectCounter = () => ({
+  type: 'INCREMENT_CORRECT_COUNTER'
+})
