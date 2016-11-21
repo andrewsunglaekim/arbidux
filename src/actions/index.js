@@ -25,7 +25,7 @@ export const resetCorrectCounter = () => ({
   type: 'RESET_CORRECT_COUNTER'
 })
 
-export const startTimer(baseTime = 0){
+export const startTimer = (baseTime = 0) => {
   return {
     type: "START_TIMER",
     baseTime: baseTime,
@@ -33,14 +33,14 @@ export const startTimer(baseTime = 0){
   }
 }
 
-export const stopTimer(){
+export const stopTimer = () => {
   return {
     type: "STOP_TIMER",
     now: new Date().getTime()
   }
 }
 
-export const resetTimer(){
+export const resetTimer = () => {
   return {
     type: "RESET_TIMER",
     now: new Date().getTime()

@@ -1,5 +1,5 @@
 import {connect} from 'react-redux'
-import { getRandomNumbers, incrementAttemptCounter, incrementCorrectCounter } from '../actions'
+import { getRandomNumbers, incrementAttemptCounter, incrementCorrectCounter, startTimer } from '../actions'
 import Quiz from '../components/Quiz'
 
 const mapStateToProps = (state, ownProps) => {
@@ -9,6 +9,7 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
+// TODO: move this function to helpers
 const isCorrect = (nums, answer) => nums.reduce((prev = 0, curr) => prev + curr) === answer
 const submitQuiz = (answer, ownProps) => {
   return (dispatch, getState) => {
@@ -27,6 +28,10 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   onSubmitQuiz: (answer) => {
     console.log(answer, "this is submitting quiz")
     dispatch(submitQuiz(answer, ownProps))
+  },
+  startTimer: () => {
+    console.log("starting timer")
+    dispatch(startTimer())
   }
 })
 

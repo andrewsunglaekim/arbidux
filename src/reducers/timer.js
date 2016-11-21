@@ -4,7 +4,7 @@ const initialState = {
   baseTime: undefined
 }
 
-const timer = (state = initialState, action) {
+const timer = (state = initialState, action) => {
   switch(action.type){
     case "RESET_TIMER":
       return {
